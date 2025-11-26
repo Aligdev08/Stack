@@ -8,6 +8,7 @@ def display_options() -> None:
     print("3 - peek")
     print("4 - test for empty")
     print("5 - test for full")
+    print("6 - display stack")
     print("9 - quit")
     print("")
 
@@ -20,7 +21,7 @@ def is_num(input: str) -> bool:
         return False
 
 
-max_length = input("What would you like the maximum length of the stack to be? ")
+max_length = input("What is the stack's length? ")
 while not is_num(max_length):
     max_length = input("Please input a valid number: ")
 
@@ -49,6 +50,8 @@ while choice != 9:
             print(str(stack.is_empty()))
         case 5:
             print(str(stack.is_full()))
+        case 6:
+            print(stack)
         case 9:
             pass
         case _:  # fallback
