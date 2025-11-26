@@ -1,6 +1,6 @@
 class Stack:
     def __init__(self, max_length: int):
-        self.array = [None] * max_length
+        self.array = [None] * max_length  # simulate list being fixed-length
         self.top_pointer = 0  # next available index
 
     def __str__(self) -> str:
