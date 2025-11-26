@@ -3,6 +3,9 @@ class Stack:
         self.array = [None] * max_length
         self.top_pointer = 0  # next available index
 
+    def __str__(self) -> str:
+        return ", ".join(value if value else "_" for value in self.array)
+
     def is_empty(self) -> bool:
         return self.top_pointer == 0
 
