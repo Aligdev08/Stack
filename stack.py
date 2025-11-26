@@ -12,7 +12,7 @@ class Stack:
     def is_full(self) -> bool:
         return self.top_pointer == len(self.array)
 
-    def peek(self) -> bool:
+    def peek(self) -> object:
         return self.array[self.top_pointer - 1]
 
     def pop(self) -> object:
