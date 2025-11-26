@@ -16,7 +16,7 @@ class Stack:
         if self.is_empty():
             raise ValueError("Stack is empty.")
         self.top_pointer -= 1
-        return self.array[self.top_pointer]
+        return self.array[self.top_pointer]  # doesn't have to be replaced with None
 
     def push(self, value: object) -> None:
         if self.is_full():
