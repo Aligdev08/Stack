@@ -4,7 +4,10 @@ class Stack:
         self.top_pointer = 0  # next available index
 
     def __str__(self) -> str:
-        return ", ".join(value if value else "_" for value in self.array)
+        return ", ".join(
+            value if value and i < self.top_pointer else "_"
+            for i, value in enumerate(self.array)
+        )
 
     def is_empty(self) -> bool:
         return self.top_pointer == 0
